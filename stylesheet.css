@@ -1,11 +1,12 @@
 /* ==========================Global Style======================== */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 body {
   margin: 5px;
   padding: 0.2rem;
   font-family: "Open Sans", sans-serif;
   color: #0d0d0d;
   height: 100vh;
-  padding: 5px;
   /* Padding to avoid the "unsafe" areas behind notches in the screen */
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
     env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
@@ -44,7 +45,7 @@ p {
   font-size: 14px;
 }
 h2 {
-  font-size: 15px;
+  font-size: 4vw;
   color: #353535 !important;
   font-weight: bold;
 }
@@ -56,7 +57,7 @@ h2::after {
   margin: 20px auto;
 }
 h3 {
-  font-size: 15px;
+  font-size: 3vw;
   color: #8c8c8c;
   text-transform: uppercase;
   font-weight: bold;
@@ -77,7 +78,7 @@ h3::after {
   margin-right: auto;
 }
 
-.aida-home {
+.cover-home {
   display: block;
   width: 100%;
   height: auto;
@@ -88,42 +89,75 @@ h3::after {
   border-radius: 20px;
 }
 
-.overlay {
+.aida-pic {
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   height: 100%;
-  width: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
   opacity: 0;
-  transition: 0.5s ease;
-  background-color: #2f9aa5;
+  transition: 1s ease;
+  border: 6px;
+  border-radius: 20px;
 }
 
-.pic-container:hover .overlay {
-  opacity: 1;
+.pic-container:hover .aida-pic {
+  opacity: 50%;
+}
+.pic-container:hover .cover-home {
+  opacity: 0;
 }
 
-.pic-text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+.home {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.58;
+  letter-spacing: -0.003em;
+  font-size: 8vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
+
+.home2 {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -0.003em;
+  font-size: 6vw;
+  padding-bottom: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /*=================== NAVIGATION=================*/
 .menu {
   display: inline;
+  padding: 1em 1em;
+  font-family: "Bebas Neue", sans-serif;
+}
+.menu-button {
+  padding: 12px 14px;
+  background-color: #316c72;
+  font-size: 3vw;
+  opacity: 60%;
 }
 .menu-links {
   display: none;
+  text-align: center;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 12px 16px;
+  padding: 14px 16px;
 }
 
 .menu:hover .menu-links {
@@ -131,8 +165,10 @@ h3::after {
 }
 .menu:hover .menu-links li {
   display: inline-block;
+  padding-left: 3em;
+  padding-right: 3em;
+  font-size: 2vw;
 }
-
 .sticky {
   position: fixed;
   top: 0;
