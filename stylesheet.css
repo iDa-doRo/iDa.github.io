@@ -23,12 +23,11 @@ body {
 }
 
 a {
-  color: #e04343;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s;
-  border-bottom: 1px dashed;
+  color: #236b73;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
   outline: none !important;
 }
 a:hover,
@@ -70,15 +69,50 @@ h3::after {
   margin-top: 20px;
 }
 
-/*===================BASE==========================*/
-
-#aida_home {
+/*===================HEADER==========================*/
+.pic-container {
+  position: relative;
   width: 50%;
-  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aida-home {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 50%;
   border: 6px;
   border-radius: 20px;
-  border-style: solid;
-  border-color: rgb(143, 154, 173);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: #2f9aa5;
+}
+
+.pic-container:hover .overlay {
+  opacity: 1;
+}
+
+.pic-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 /*=================== NAVIGATION=================*/
 .menu {
