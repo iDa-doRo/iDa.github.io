@@ -1,0 +1,93 @@
+/* ==========================Global Style======================== */
+body {
+  max-width: 64rem;
+  max-height: 47rem;
+  margin: auto;
+  padding: 0.2rem;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #e04343;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 1px dashed;
+  outline: none !important;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #0d0d0d;
+  text-decoration: none;
+  outline: none !important;
+}
+p {
+  color: #8c9398;
+  word-spacing: 1px;
+  line-height: 25px;
+  font-size: 14px;
+}
+h2 {
+  font-size: 15px;
+  color: #353535 !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+h2::after {
+  content: " ";
+  border: solid 1px #cccccc;
+  display: block;
+  width: 65px;
+  margin: 20px auto;
+}
+h3 {
+  font-size: 15px;
+  color: #8c8c8c;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+h3::after {
+  content: " ";
+  border: solid 1px #cccccc;
+  display: block;
+  width: 65px;
+  margin-top: 20px;
+}
+
+/*===================BASE==========================*/
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+html,
+html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+html,
+button,
+input,
+select,
+textarea {
+  font-family: "Varela Round", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+#aida_home {
+  width: 50%;
+  height: 50%;
+  border: 6px;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: chocolate;
+}
