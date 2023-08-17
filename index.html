@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--Udemy bootcamp coding exercise 3 and 4 semantics-->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aida Donis Romeo Portfolio</title>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Service</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>iDa doRo</h1>
+      <h3>Aida Donis Romeo</h3>
+      <img src="" alt="Aida Donis Romeo" />
+      <hr />
+      <!--hr = horitzontal line across page-->
+    </header>
+    <main>
+      <p>
+        <b>A Little About Me</b> are one of the most common and widespread
+        domestic animals, with a total population of
+        <b>23.7 billion as of 2018</b>, up from more than 19 billion in 2011.
+      </p>
+      <p>There are more chickens in the world than any other bird.</p>
+      <section>
+        <h2>Service</h2>
+        <p>
+          Lorem ipsum dolor sit,<br />
+          amet consectetur adipisicing elit.<br />
+          <!--br = break line-->
+          Cupiditate, ipsum explicabo.<br />
+          Molestias sint nesciunt,<br />
+          exercitationem voluptatum nihil sit laborum,<br />
+          beatae magnam eligendi aliquid nobis<br />
+          doloribus est blanditiis et eum quo!
+        </p>
+      </section>
+      <section>
+        <h3>Portfolio</h3>
+        <p>
+          ipsum dolor sit amet consectetur adipisicing elit. Maiores illum
+          libero distinctio harum beatae quis? Sed accusantium, temporibus
+          officia quae error adipisci. Eveniet eligendi accusamus assumenda
+          accusantium. Architecto, eius? Debitis!
+        </p>
+        <!--images can come from url or local files. 
+        Pictures from local files, must be in the same folder as the pages-->
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Eier_verschiedener_Hühnerrassen.jpg/590px-Eier_verschiedener_Hühnerrassen.jpg"
+          alt="Chicken"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+          ipsam corrupti nemo. Reprehenderit minus officia unde aliquid
+          dignissimos quo dolores quos at rem facere. Rem commodi inventore
+          temporibus dolores asperiores.
+        </p>
+      </section>
+      <section>
+        <h3>Contact</h3>
+        <hr />
+        <form action="/dummy">
+          <div>
+            <h4>Personal Data</h4>
+            <label for="fname">First Name: </label>
+            <input type="text" id="fname" name="fname" required />
+            <label for="sname">Last Name: </label>
+            <input type="text" id="sname" name="sname" required />
+          </div>
+          <br />
+          <div>
+            <label for="mail">Email adress: </label>
+            <input type="email" name="mail" id="mail" required />
+            <label for="pass">Password: </label>
+            <input
+              type="password"
+              name="pass"
+              id="pass"
+              minlength="8"
+              maxlength="15"
+              required
+            />
+          </div>
+          <br />
+          <div>
+            <label for="pref">What is your contact related to? </label>
+            <select name="preference" id="pref">
+              <option value="prog">Web Development</option>
+              <option value="phot">App Development</option>
+              <option value="ui">UI/UX</option>
+              <option value="des">Product Design</option>
+            </select>
+          </div>
+          <hr />
+          <div>
+            <h4>How did you find about us?</h4>
+            <input type="radio" name="select" id="linked" value="LinkedIn" />
+            <label for="linked">LinkedIn</label><br />
+            <input type="radio" name="select" id="google" value="google" />
+            <label for="google">Google</label><br />
+            <input type="radio" name="select" id="friend" value="friend" />
+            <label for="friend">Friend suggestion</label><br />
+            <input type="radio" name="select" id="pod" value="podcast" />
+            <label for="pod">PodCast</label>
+          </div>
+          <br />
+        </form>
+        <button type="submit">Submit From</button>
+      </section>
+    </main>
+    <footer>
+      <p>This is the footer</p>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
