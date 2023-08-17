@@ -98,3 +98,9 @@ h3::after {
 .menu:hover .menu-links li {
   display: inline-block;
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
