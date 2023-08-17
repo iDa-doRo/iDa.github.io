@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!--Udemy bootcamp coding exercise 3 and 4 semantics-->
+  <!--Aida Donis Romeo Portfolio main page
+    Designed by: Aida Donis Romeo
+    Created by: Aida Donis Romeo 
+    Last Edit: August 2023 -->
 
   <head>
     <meta charset="UTF-8" />
@@ -8,33 +11,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aida Donis Romeo Portfolio</title>
   </head>
-
   <body>
     <nav>
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Service</a></li>
-        <li><a href="">Portfolio</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="index.html#home">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#service">Service</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
     <header>
-      <h1>iDa doRo</h1>
-      <h3>Aida Donis Romeo</h3>
-      <img src="" alt="Aida Donis Romeo" />
+      <h1 id="home">Aida Donis Romeo</h1>
+      <h2>iDa doRo</h2>
+      <img src="img/aida.jpeg" alt="Aida Donis Romeo" />
       <hr />
       <!--hr = horitzontal line across page-->
     </header>
     <main>
       <p>
-        <b>A Little About Me</b> are one of the most common and widespread
+        <h3 id="about">A Little About Me</h3> 
+        <br>
+        are one of the most common and widespread
         domestic animals, with a total population of
         <b>23.7 billion as of 2018</b>, up from more than 19 billion in 2011.
       </p>
       <p>There are more chickens in the world than any other bird.</p>
       <section>
-        <h2>Service</h2>
+        <h3 id="service">Service</h3>
         <p>
           Lorem ipsum dolor sit,<br />
           amet consectetur adipisicing elit.<br />
@@ -47,28 +51,42 @@
         </p>
       </section>
       <section>
-        <h3>Portfolio</h3>
+        <h3 id="portfolio">Portfolio</h3>
         <p>
           ipsum dolor sit amet consectetur adipisicing elit. Maiores illum
-          libero distinctio harum beatae quis? Sed accusantium, temporibus
-          officia quae error adipisci. Eveniet eligendi accusamus assumenda
-          accusantium. Architecto, eius? Debitis!
+          libero distinctio harum beatae quis?
         </p>
-        <!--images can come from url or local files. 
-        Pictures from local files, must be in the same folder as the pages-->
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Eier_verschiedener_Hühnerrassen.jpg/590px-Eier_verschiedener_Hühnerrassen.jpg"
-          alt="Chicken"
-        />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-          ipsam corrupti nemo. Reprehenderit minus officia unde aliquid
-          dignissimos quo dolores quos at rem facere. Rem commodi inventore
-          temporibus dolores asperiores.
-        </p>
+        <ul>
+            <li>Web Development
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                    <li>Project 3</li>
+                </ul>
+            </li>
+            <li>App Development
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                </ul>
+            </li>
+            <li>UI/UX
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                </ul>
+            </li>
+            <li>Product Design
+                <ul>
+                    <li>Project 1</li>
+                    <li>Project 2</li>
+                    <li>Project 3</li>
+                </ul>
+            </li>
+        </ul>
       </section>
       <section>
-        <h3>Contact</h3>
+        <h3 id="contact">Contact</h3>
         <hr />
         <form action="/dummy">
           <div>
