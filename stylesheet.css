@@ -2,8 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 body {
-  margin: 5px;
-  padding: 0.2rem;
+  margin: 0.5em;
   font-family: "Open Sans", sans-serif;
   color: #0d0d0d;
   height: 100vh;
@@ -140,37 +139,52 @@ h3::after {
 }
 
 /*=================== NAVIGATION=================*/
-.menu {
+.navbar {
   display: inline;
-  padding: 1em 1em;
+
   font-family: "Bebas Neue", sans-serif;
+  background-color: white;
+  border-color: white;
 }
+
 .menu-button {
   padding: 12px 14px;
   background-color: #316c72;
   font-size: 3vw;
   opacity: 60%;
+  position: fixed;
 }
-.menu-links {
+.navbar-nav {
   display: none;
   text-align: center;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
   padding: 14px 16px;
+  width: 100%;
 }
 
-.menu:hover .menu-links {
-  display: inline;
+.container-fluid {
+  width: 100%;
 }
-.menu:hover .menu-links li {
+.navbar:hover .navbar-nav {
+  display: inline;
+  width: 100%;
+}
+.navbar:hover .navbar-nav li {
   display: inline-block;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
   font-size: 2vw;
 }
+
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: green;
+  }
 }
