@@ -1,6 +1,6 @@
 /* ==========================Global Style======================== */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-@import "animate.css";
+
 body {
   margin: 0.5em;
   font-family: "Open Sans", sans-serif;
@@ -43,18 +43,7 @@ p {
   line-height: 25px;
   font-size: 14px;
 }
-/* h2 {
-  font-size: 4vw;
-  color: #353535 !important;
-  font-weight: bold;
-}
-h2::after {
-  content: " ";
-  border: solid 1px #cccccc;
-  display: block;
-  width: 65px;
-  margin: 20px auto;
-} */
+
 h3 {
   font-size: 3vw;
   color: #8c8c8c;
@@ -111,17 +100,27 @@ h3::after {
   opacity: 0;
 }
 
+#top {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
 .home {
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
-  line-height: 1.58;
   letter-spacing: -0.003em;
   font-size: 8vw;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
+  padding: 0;
 }
 
 .nickname {
@@ -137,14 +136,13 @@ h3::after {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  animation: bounce; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 2s;
+  animation: flipInY; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 4s;
 }
 
 /*=================== NAVIGATION=================*/
 .navbar {
   display: inline;
-
   font-family: "Bebas Neue", sans-serif;
   background-color: white;
   border-color: white;
@@ -161,12 +159,20 @@ h3::after {
   display: none;
   text-align: center;
   background-color: white;
-  padding: 14px 16px;
   width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-nav a {
+  padding: 0;
+  margin: 0;
 }
 
 .container-fluid {
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .navbar:hover .navbar-nav {
   display: inline;
