@@ -1,6 +1,6 @@
 /* ==========================Global Style======================== */
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
+@import "animate.css";
 body {
   margin: 0.5em;
   font-family: "Open Sans", sans-serif;
@@ -43,7 +43,7 @@ p {
   line-height: 25px;
   font-size: 14px;
 }
-h2 {
+/* h2 {
   font-size: 4vw;
   color: #353535 !important;
   font-weight: bold;
@@ -54,7 +54,7 @@ h2::after {
   display: block;
   width: 65px;
   margin: 20px auto;
-}
+} */
 h3 {
   font-size: 3vw;
   color: #8c8c8c;
@@ -124,9 +124,10 @@ h3::after {
   margin-bottom: 0;
 }
 
-.home2 {
+.nickname {
   text-align: center;
   font-family: "Bebas Neue", sans-serif;
+  color: #353535;
   font-weight: 200;
   line-height: 1;
   letter-spacing: -0.003em;
@@ -136,6 +137,8 @@ h3::after {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s;
 }
 
 /*=================== NAVIGATION=================*/
