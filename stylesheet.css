@@ -1,9 +1,8 @@
 /* ==========================Global Style======================== */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 body {
   margin: 0.5em;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Rubik", sans-serif;
   color: #0d0d0d;
   height: 100vh;
   /* Padding to avoid the "unsafe" areas behind notches in the screen */
@@ -104,9 +103,8 @@ h3 {
 }
 .home {
   text-align: center;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
-  letter-spacing: -0.003em;
   font-size: 8vw;
   margin-left: auto;
   margin-right: auto;
@@ -117,12 +115,11 @@ h3 {
 
 .nickname {
   text-align: center;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Rubik", sans-serif;
   color: #353535;
   font-weight: 200;
   line-height: 1;
-  letter-spacing: -0.003em;
-  font-size: 6vw;
+  font-size: 4vw;
   padding-bottom: 2px;
   margin-left: auto;
   margin-right: auto;
@@ -132,15 +129,31 @@ h3 {
   animation-duration: 4s;
 }
 
-.soon {
+.waviy {
+  position: relative;
   text-align: center;
   padding: 0;
   margin: 0;
 }
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #236b73;
+  animation: flip 3.7s infinite;
+  animation-delay: calc(0.3s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
+
 /*=================== NAVIGATION=================*/
 .navbar {
   display: inline;
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "Rubik", sans-serif;
   background-color: white;
   border-color: white;
 }
@@ -150,6 +163,7 @@ h3 {
   background-color: #316c72;
   font-size: 3vw;
   opacity: 60%;
+  border-radius: 15%;
   position: fixed;
 }
 .navbar-nav {
@@ -201,7 +215,7 @@ h3 {
   height: 100px;
   background: linear-gradient(45deg, rgb(47, 94, 95), #d8f4fa);
   margin: 10px;
-  animation: wave 1s linear infinite;
+  animation: wave 3s linear infinite;
   border-radius: 20px;
 }
 .wave:nth-child(2) {
