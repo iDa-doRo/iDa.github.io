@@ -1,10 +1,20 @@
 /* ==========================Global Style======================== */
+/*
+HEX Color Palette
+#2f5e5f --main
+#2f465f
+#302f5f
+#482f5f
+#5f2f5e
+#5f2f46
+*/
 
 body {
   margin: 0.5em;
   font-family: "Rubik", sans-serif;
   color: #0d0d0d;
   height: 100vh;
+  background-color: #eaf4f4;
   /* Padding to avoid the "unsafe" areas behind notches in the screen */
   padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
     env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
@@ -21,21 +31,6 @@ body {
   ); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
-a {
-  color: #236b73;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-  outline: none !important;
-}
-a:hover,
-a:focus,
-a:active {
-  color: #0d0d0d;
-  text-decoration: none;
-  outline: none !important;
-}
 p {
   color: #8c9398;
   word-spacing: 1px;
@@ -63,7 +58,7 @@ h3 {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  opacity: 50%;
+  opacity: 70%;
   border: 6px;
   border-radius: 20px;
 }
@@ -104,6 +99,7 @@ h3 {
 .home {
   text-align: center;
   font-family: "Rubik", sans-serif;
+  color: #71897f;
   font-weight: 400;
   font-size: 8vw;
   margin-left: auto;
@@ -111,12 +107,15 @@ h3 {
   margin-top: 0;
   margin-bottom: 0;
   padding-top: 0.8em;
+  animation: bounceInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s;
 }
 
 .nickname {
   text-align: center;
   font-family: "Rubik", sans-serif;
-  color: #353535;
+  color: #a4c3b2;
+  opacity: 90%;
   font-weight: 200;
   line-height: 1;
   font-size: 4vw;
@@ -125,8 +124,8 @@ h3 {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  animation: flipInY; /* referring directly to the animation's @keyframe declaration */
-  animation-duration: 4s;
+  animation: bounceInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s;
 }
 
 .waviy {
@@ -139,7 +138,8 @@ h3 {
   position: relative;
   display: inline-block;
   font-size: 40px;
-  color: #236b73;
+  opacity: 80%;
+  color: #906a6e;
   animation: flip 3.7s infinite;
   animation-delay: calc(0.3s * var(--i));
 }
@@ -154,22 +154,28 @@ h3 {
 .navbar {
   display: inline;
   font-family: "Rubik", sans-serif;
-  background-color: white;
-  border-color: white;
+  background-color: #eaf4f4;
+  border: 0;
+  opacity: 100%;
+}
+
+.navbar-default::after {
+  opacity: 0%;
 }
 
 .menu-button {
-  padding: 12px 14px;
-  background-color: #316c72;
-  font-size: 3vw;
-  opacity: 60%;
+  padding: 20px 20px;
+  background-image: url(img/favicon.ico);
+  font-size: 4vw;
+  opacity: 100%;
   border-radius: 15%;
   position: fixed;
 }
 .navbar-nav {
   display: none;
   text-align: center;
-  background-color: white;
+  color: #6b9080;
+  background-color: #eaf4f4;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -180,6 +186,31 @@ h3 {
   margin: 0;
 }
 
+.navbar-nav li {
+  background-color: #6b9080;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  outline: none !important;
+}
+
+.navbar-nav li:focus:active {
+  background-color: #cce3de;
+  outline: none !important;
+}
+
+.navbar-nav li a:focus:active {
+  color: #f6fff8;
+}
+
+.navbar-default .navbar-nav li a {
+  color: #f6fff8;
+}
+
+.navbar-default .navbar-nav li a:hover:focus:active {
+  color: #3d5249;
+}
 .container-fluid {
   width: 100%;
   padding: 0;
@@ -194,12 +225,16 @@ h3 {
   padding-left: 2em;
   padding-right: 2em;
   font-size: 2vw;
+  text-decoration: dashed;
 }
 
 .sticky {
   position: fixed;
   top: 0;
   width: 100%;
+}
+.collapse {
+  padding-left: 50px;
 }
 
 /*=================== WAVE =================*/
@@ -208,7 +243,7 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: #eaf4f4;
 }
 .wave {
   width: 5px;
@@ -255,5 +290,18 @@ h3 {
   }
   100% {
     transform: scale(0);
+  }
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 200px) and (max-width: 768px) {
+  .navbar:hover .navbar-nav li {
+    display: block;
+    z-index: 1;
+  }
+
+  .menu-button {
+    padding: 14px 14px;
+    background-image: url(img/favicon-small.png);
   }
 }
