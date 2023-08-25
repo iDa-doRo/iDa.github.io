@@ -1,13 +1,4 @@
 /* ==========================Global Style======================== */
-/*
-HEX Color Palette
-#2f5e5f --main
-#2f465f
-#302f5f
-#482f5f
-#5f2f5e
-#5f2f46
-*/
 
 body {
   margin: 0.5em;
@@ -78,12 +69,33 @@ h3 {
   border: 6px;
   border-radius: 20px;
 }
+.welcome {
+  position: absolute;
+  font-size: 3vw;
+  color: #fafefb;
+  top: 60%;
+  text-shadow: 1px 1px #737373;
+  bottom: 0;
+  left: 36%;
+  right: 0;
+  height: 100%;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  transition: 1s ease;
+}
 
 .pic-container:hover .aida-pic {
-  opacity: 50%;
+  opacity: 45%;
 }
 .pic-container:hover .cover-home {
   opacity: 0;
+}
+
+.pic-container:hover .welcome {
+  opacity: 100%;
+  color: #f6fff8;
 }
 
 #top {
@@ -101,6 +113,7 @@ h3 {
   font-family: "Rubik", sans-serif;
   color: #71897f;
   font-weight: 400;
+  letter-spacing: -0.05em;
   font-size: 8vw;
   margin-left: auto;
   margin-right: auto;
@@ -117,6 +130,7 @@ h3 {
   color: #a4c3b2;
   opacity: 90%;
   font-weight: 200;
+  letter-spacing: -0.1em;
   line-height: 1;
   font-size: 4vw;
   padding-bottom: 2px;
