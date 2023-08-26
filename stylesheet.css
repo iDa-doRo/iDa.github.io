@@ -39,6 +39,7 @@ h3 {
 .pic-container {
   position: relative;
   width: 50%;
+  top: 3vw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -108,10 +109,12 @@ h3 {
   margin: 0;
   padding: 0;
 }
+
+/*======================== H ANIMATIONS====================*/
 .home {
   text-align: center;
   font-family: "Rubik", sans-serif;
-  color: #71897f;
+  color: #3d5249;
   font-weight: 400;
   letter-spacing: -0.05em;
   font-size: 8vw;
@@ -122,13 +125,26 @@ h3 {
   padding-top: 0.8em;
   animation: bounceInLeft; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 3s;
+  z-index: 0;
+}
+
+.color-home {
+  width: auto;
+  height: 0vw;
+  position: relative;
+  padding-bottom: 18%;
+  top: 3vw;
+  background-color: #cce3de;
+  animation: bounceInRight; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s;
+  z-index: -1;
 }
 
 .nickname {
   text-align: center;
   font-family: "Rubik", sans-serif;
-  color: #a4c3b2;
-  opacity: 90%;
+  color: #cce3de;
+  opacity: 100%;
   font-weight: 200;
   letter-spacing: -0.1em;
   line-height: 1;
@@ -140,8 +156,22 @@ h3 {
   margin-bottom: 0;
   animation: bounceInRight; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 3s;
+  z-index: 0;
 }
 
+.color-nick {
+  position: relative;
+  width: auto;
+  height: 6.5vw;
+  top: 3vw;
+  padding-top: 2%;
+  background-color: #6b9080;
+  animation: bounceInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s;
+  z-index: -1;
+}
+
+/*=========== In devop animation==========*/
 .waviy {
   position: relative;
   text-align: center;
@@ -151,9 +181,9 @@ h3 {
 .waviy span {
   position: relative;
   display: inline-block;
-  font-size: 40px;
-  opacity: 80%;
-  color: #906a6e;
+  font-size: 4vw;
+  opacity: 90%;
+  color: #5b7b6d;
   animation: flip 3.7s infinite;
   animation-delay: calc(0.3s * var(--i));
 }
@@ -167,85 +197,81 @@ h3 {
 /*=================== NAVIGATION=================*/
 .navbar {
   display: inline;
+  min-height: 0;
   font-family: "Rubik", sans-serif;
   background-color: #eaf4f4;
   border: 0;
   opacity: 100%;
+  background-color: transparent;
 }
 
-.navbar-default::after {
-  opacity: 0%;
-}
-
-.menu-button {
-  padding: 20px 20px;
-  background-image: url(img/favicon.ico);
-  font-size: 4vw;
-  opacity: 100%;
-  border-radius: 15%;
-  position: fixed;
-}
-.navbar-nav {
-  display: none;
-  text-align: center;
-  color: #6b9080;
-  background-color: #eaf4f4;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar-nav a {
-  padding: 0;
-  margin: 0;
-}
-
-.navbar-nav li {
-  background-color: #6b9080;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
-  outline: none !important;
-}
-
-.navbar-nav li:focus:active {
-  background-color: #cce3de;
-  outline: none !important;
-}
-
-.navbar-nav li a:focus:active {
-  color: #f6fff8;
-}
-
-.navbar-default .navbar-nav li a {
-  color: #f6fff8;
-}
-
-.navbar-default .navbar-nav li a:hover:focus:active {
-  color: #3d5249;
-}
 .container-fluid {
   width: 100%;
   padding: 0;
   margin: 0;
 }
-.navbar:hover .navbar-nav {
+
+.menu-button {
+  width: 49px;
+  height: 49px;
+  background-image: url(icons/favicon-50x50.png);
+  opacity: 100%;
+  border-radius: 30%;
+  position: fixed;
+}
+.navi {
+  display: none;
+  text-align: center;
+  background-color: #eaf4f4;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+.navi a {
+  padding: 0;
+  margin: 0;
+}
+
+.navi li {
+  background-color: #6b9080;
+  padding: 1vw;
+  transition: all 1s;
+  outline: none !important;
+}
+
+.navi li a {
+  color: #f6fff8;
+}
+
+.navi li a:hover,
+.navi li a:focus,
+.navi li a:active {
+  color: #3d5249;
+  text-decoration: none;
+}
+
+.navi li:hover,
+.navi li:focus,
+.navi li:active {
+  background-color: #a3c2b6;
+}
+
+.navbar:hover .navi {
   display: inline;
   width: 100%;
 }
-.navbar:hover .navbar-nav li {
+.navbar:hover .navi li {
   display: inline-block;
   padding-left: 2em;
   padding-right: 2em;
   font-size: 2vw;
-  text-decoration: dashed;
 }
 
 .sticky {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 1vw;
 }
 .collapse {
   padding-left: 50px;
@@ -309,13 +335,14 @@ h3 {
 
 /* MEDIA QUERIES */
 @media (min-width: 200px) and (max-width: 768px) {
-  .navbar:hover .navbar-nav li {
+  .navbar:hover .navi li {
     display: block;
     z-index: 1;
   }
 
   .menu-button {
-    padding: 14px 14px;
-    background-image: url(img/favicon-small.png);
+    width: 35px;
+    height: 35px;
+    background-image: url(icons/favicon-32x32.png);
   }
 }

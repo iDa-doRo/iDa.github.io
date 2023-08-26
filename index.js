@@ -12,14 +12,3 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
-
-var prevScrollpos = window.scrollY;
-window.onscroll = function () {
-  var currentScrollPos = window.scrollY;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navi").style.top = "0";
-  } else {
-    document.getElementById("navi").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-};
