@@ -178,12 +178,11 @@ h3 {
 }
 
 .menu-button {
-  width: 2.188em;
-  height: 2.188em;
-  background-image: url(icons/favicon-big.png);
+  padding: 20px 20px;
+  background-image: url(img/favicon.ico);
+  font-size: 4vw;
   opacity: 100%;
-  border-radius: 26%;
-  border-color: #3d5249;
+  border-radius: 15%;
   position: fixed;
 }
 .navbar-nav {
@@ -313,5 +312,10 @@ h3 {
   .navbar:hover .navbar-nav li {
     display: block;
     z-index: 1;
+  }
+
+  .menu-button {
+    padding: 14px 14px;
+    background-image: url(img/favicon-small.png);
   }
 }
