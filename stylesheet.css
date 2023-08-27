@@ -29,12 +29,6 @@ p {
   font-size: 14px;
 }
 
-h3 {
-  font-size: 3vw;
-  color: #8c8c8c;
-  font-weight: bold;
-}
-
 /*===================HEADER==========================*/
 .pic-container {
   position: relative;
@@ -72,17 +66,15 @@ h3 {
 }
 .welcome {
   position: absolute;
-  font-size: 3vw;
+  font-size: 3.5vw;
   color: #fafefb;
   top: 60%;
   text-shadow: 1px 1px #737373;
   bottom: 0;
-  left: 36%;
+  left: 34%;
   right: 0;
   height: 100%;
   width: auto;
-  margin-left: auto;
-  margin-right: auto;
   opacity: 0;
   transition: 1s ease;
 }
@@ -336,21 +328,45 @@ h3 {
   }
 }
 
+/*============FOOTER===================*/
+footer {
+  position: fixed;
+  bottom: 0.5vw;
+  width: 100%;
+  height: 2vw; /* Height of the footer */
+  background: transparent;
+}
+
 /* MEDIA QUERIES */
 @media (min-width: 200px) and (max-width: 768px) {
   .navbar:hover .navi li {
     display: block;
     z-index: 1;
-    padding-left: 3.5vw;
-    padding-right: 3.5vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    font-size: 3vw;
+    padding-left: 9.5vw;
+    padding-right: 13.5vw;
+    padding-top: 3vw;
+    padding-bottom: 4vw;
+    font-size: 5vw;
+  }
+
+  .collapse {
+    padding-left: 4vw;
+  }
+  .welcome {
+    font-size: 7vw;
+  }
+
+  .pic-container {
+    width: 98%;
   }
 
   .menu-button {
     width: 35px;
     height: 35px;
     background-image: url(icons/favicon-32x32.png);
+  }
+
+  footer {
+    bottom: 3.5vw;
   }
 }
